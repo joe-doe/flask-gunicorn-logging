@@ -7,9 +7,25 @@ Cookbook for logging with flask and gunicorn
 import provided logger module before you create flask app
 
 ## Run
+### Clone
 ```bash
+git clone git@github.com:joe-doe/flask-gunicorn-logging.git
+```
 
-flask-gunicorn-logging/venv/bin/gunicorn --bind 0.0.0.0:5000 --log-level debug --preload main:app
+### Create virtual environment
+```bash
+virtualenv venv
+source venv/bin/activate
+```
+
+### Install dependencies
+```bash
+pip install -U -r requirements.txt 
+```
+
+### Execute (while in virtual environment)
+```bash
+gunicorn --bind 0.0.0.0:5000 --log-level debug --preload main:app
 ```
 
 
